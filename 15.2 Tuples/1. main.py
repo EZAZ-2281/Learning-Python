@@ -8,3 +8,5 @@ student = (
 print(student[0])
 print(student[3])
 print(student[1:]) #form rafim to rest of the end
+
+
