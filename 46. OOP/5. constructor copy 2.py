@@ -1,5 +1,6 @@
 class Item: 
     payRate = 0.8
+    all = []
     def __init__(this, name:str, price:float, quantity = 0): 
     
         # run validation
@@ -10,20 +11,23 @@ class Item:
         this.name = name 
         this.price = price
         this.quantity = quantity
+
+        # action to exucute
+        Item.all.append(this) 
     
     def result(this): 
         return this.price * this.quantity
 
     def discount(this): 
-        this.price = this.price * Item.payRate
+        this.price = this.price * this.payRate
+
+    def __repr__(this): # how to represent the object
+        return f"Item({this.name}, {this.price}, {this.quantity})"
 
 item1 = Item("Phone", 100, 5)
-print(item1.result())
-print(item1.name, item1.price, item1.quantity) 
-print(Item.payRate)
-print(item1.payRate)
-print(Item.__dict__) # all the attributes of class level
-print(item1.__dict__) # all the attributes of instance level
+item2 = Item("Laptop", 100, 5)
+item3 = Item("Mouse", 100, 5)
+for x in Item.all: 
+    print(x.name) 
 
-item1.discount()
-print(item1.price) # 80.0
+print(Item.all) 

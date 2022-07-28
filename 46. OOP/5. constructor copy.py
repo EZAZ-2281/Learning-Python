@@ -15,15 +15,13 @@ class Item:
         return this.price * this.quantity
 
     def discount(this): 
-        this.price = this.price * Item.payRate
+        this.price = this.price * this.payRate
 
 item1 = Item("Phone", 100, 5)
-print(item1.result())
-print(item1.name, item1.price, item1.quantity) 
-print(Item.payRate)
-print(item1.payRate)
-print(Item.__dict__) # all the attributes of class level
-print(item1.__dict__) # all the attributes of instance level
-
 item1.discount()
 print(item1.price) # 80.0
+
+item2 = Item("Laptop", 200, 5)
+item2.payRate = 0.7 # get the value from instance level
+item2.discount()
+print(item2.price) # 140.0
