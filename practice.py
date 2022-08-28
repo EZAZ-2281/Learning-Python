@@ -48,7 +48,7 @@ else:
 
 print(isPerfect(90)) """
 
-s = "kibria"
+""" s = "kibria"
 l = len(s)
 c = 0
 for i in range(l): 
@@ -59,4 +59,19 @@ for i in range(l):
 if c == 0: 
     print("yes")
 else: 
-    print("Not palindrome")
+    print("Not palindrome") """
+
+
+""" a = input("Enter name: ")
+arr = []
+for i in a.split('-'): 
+     arr.append(i)
+
+arr.sort()
+for i in range(len(arr)): 
+    print(arr[i],end="-")
+    # print('-'.join(arr[i]))  """
+
+item = [i for i in input().split('-')]
+item.sort()
+print('-'.join(item)) 
