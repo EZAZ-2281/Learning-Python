@@ -1,2 +1,4 @@
-x = list(map(int, input("Enter multiple values: ").split()))
-print("List of students: ", x)
+take_number = int(input())
+
+print("The next number for the number ",take_number," is",take_number+1,end=".\n")
+print("The previous number for the number ",take_number," is",take_number-1,end=".")
